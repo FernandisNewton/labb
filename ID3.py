@@ -38,7 +38,7 @@ def buildTree(df,tree=None):
         tree[node] = {} 
     for value in attValue:
         subtable = get_subtable(df,node,value)
-        clValue,counts = np.unique(subtable['play'],return_counts=True)                        
+        clValue,counts = np.unique(subtable['PlayTennis'],return_counts=True)                        
         if len(counts)==1: 
             tree[node][value] = clValue[0]                                                    
         else:        
